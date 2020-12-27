@@ -23,7 +23,7 @@ window.addEventListener("load", event => {
          img: "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/D3D09045-E400-E081-EA1C-9AF88B7C26C1.png",
          artistName: "Радиостанция Тихий Дон",
          songName: "73.76 УКВ",
-         song: "http://185.154.72.15:8000/;stream.nsv",
+         song: "http://185.154.72.15:8000",
          color: "#ffffff"
       },
       {
@@ -122,7 +122,7 @@ window.addEventListener("load", event => {
          img: "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/05B98864-345B-B51C-46E6-FF300D903A4F.png",
          artistName: "Дорожное радио",
          songName: "102.2 FM",
-         song: "http://185.154.72.15:8070/;stream.nsv",
+         song: "http://185.154.72.15:8070",
          color: "#ffc400"
       },
 	  
@@ -193,7 +193,7 @@ window.addEventListener("load", event => {
          img: "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/wen12.png",
          artistName: "Новое Радио",
          songName: "107.5 FM",
-         song: "http://185.154.72.15:8050/;stream.nsv",
+         song: "http://185.154.72.15:8050",
          color: "#ffffff"
       }
    ];
