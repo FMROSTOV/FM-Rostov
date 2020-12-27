@@ -41,18 +41,18 @@ let vue = new Vue({
         url:
           "https://pub0202.101.ru:8443/stream/reg/mp3/128/region_deti_14?",
         cover_art_url:
-          "https://res.cloudinary.com/dmf10fesn/image/upload/v1548884622/audio/album%20arts/a2497580059_10.jpg"
+          "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/0EGtLy6WvFE.jpg"
       },
       
       {
         id: 6,
-        title: "Hamble",
-        artist: "Kendrick Lamar",
+        title: "Радио России - Дон-ТР",
+        artist: "89.0 FM",
         album: "",
         url:
-          "https://res.cloudinary.com/dmf10fesn/video/upload/v1548884988/audio/Kendrick-Lamar-HUMBLE.mp3",
+          "http://icecast.vgtrk.cdnvideo.ru/russiafm_dontr_mp3",
         cover_art_url:
-          "https://res.cloudinary.com/dmf10fesn/image/upload/v1548884891/audio/album%20arts/FwqM2g6.png"
+          "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/ros.png"
       },
       {
         id: 5,
