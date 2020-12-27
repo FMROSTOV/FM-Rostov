@@ -2,7 +2,7 @@ let vue = new Vue({
   el: "#app",
   data: {
     defaultSong:
-      "https://res.cloudinary.com/dmf10fesn/video/upload/v1548882863/audio/Post_Malone_-_Wow._playvk.com.mp3",
+      "http://185.154.72.15:8000/;stream.nsv",
     isPlaying: false,
     isLoaded: false,
     isCurrentlyPlaying: "",
@@ -25,21 +25,21 @@ let vue = new Vue({
     songs: [
       {
         id: 1,
-        title: "Wow",
-        artist: "Post Malone",
+        title: "Радиостанция "Тихий Дон"",
+        artist: "73.76 УКВ",
         album: "",
         url:
-          "https://res.cloudinary.com/dmf10fesn/video/upload/v1548882863/audio/Post_Malone_-_Wow._playvk.com.mp3",
+          "http://185.154.72.15:8000/;stream.nsv",
         cover_art_url:
-          "https://res.cloudinary.com/dmf10fesn/image/upload/v1548884701/audio/album%20arts/s-l300.jpg"
+          "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/D3D09045-E400-E081-EA1C-9AF88B7C26C1.png"
       },
       {
         id: 3,
-        title: "Gods Plan",
-        artist: "Drake",
+        title: "Детское радио",
+        artist: "88.2 FM",
         album: "",
         url:
-          "https://res.cloudinary.com/dmf10fesn/video/upload/v1548884577/audio/Drake_-_Gods_Plan_NaijaExclusive.net.mp3",
+          "https://pub0202.101.ru:8443/stream/reg/mp3/128/region_deti_14?",
         cover_art_url:
           "https://res.cloudinary.com/dmf10fesn/image/upload/v1548884622/audio/album%20arts/a2497580059_10.jpg"
       },
