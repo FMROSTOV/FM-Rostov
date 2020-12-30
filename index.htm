@@ -1,0 +1,248 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    <META NAME="ROBOTS" CONTENT="NOINDEX,NOFOLLOW">
+    <title>Music Player</title>
+
+    <link rel="stylesheet" media="screen" href="css/reset.css"/>
+    <link rel="stylesheet" media="screen" href="css/mplayer.css"/>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/perfect-scrollbar.jquery.min.js"></script>
+    <script type="text/javascript" src="js/mplayer.js"></script>
+</head>
+<body>
+
+<div class="mplayer">
+    <div class="mplayer__front-header">
+        <div class="mplayer__front-header-next-bg"></div>
+        <div class="mplayer__front-header-current-bg"></div>
+        <div class="mplayer__front-btn-playlist"></div>
+        <div class="mplayer__cover-art">
+            <img class="mplayer__cover-art-next" src="#" alt="cover art">
+            <img class="mplayer__cover-art-current" src="#" alt="cover art">
+        </div>
+        <div class="mplayer__toolbar">
+            <div class="mplayer__prev"></div>
+            <div class="mplayer__pause"></div>
+            <div class="mplayer__next"></div>
+        </div>
+        <div class="mplayer__front-body">
+            <div class="mplayer__front-row">
+                <div class="mplayer__front-title-wrap">
+                    <div class="mplayer__front-title-track"></div>
+                    <div class="mplayer__front-title-author"></div>
+                </div>
+            </div>
+            <div class="mplayer__front-row">
+                <div class="mplayer__long">
+                    <div class="mplayer__current-time">0:00</div>
+                    <div class="mplayer__long-slider"></div>
+                    <div class="mplayer__all-time"></div>
+                </div>
+            </div>
+            <div class="mplayer__front-row">
+                <div class="mplayer__order-btn-wrap">
+                    <div class="mplayer__repeat"></div>
+                    <div class="mplayer__random"></div>
+                </div>
+                <div class="mplayer__volume">
+                    <div class="mplayer__volume-icon"></div>
+                    <div class="mplayer__volume-slider"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mplayer__playlist ">
+        <div class="mplayer__playlist-header">
+            <div class="mplayer__playlist-btn-front"></div>
+            <div class="mplayer__playlist-header-title">
+                Playlist
+            </div>
+        </div>
+        <div class="mplayer__playlist-body">
+            <div class="mplayer__playlist-body-next-bg"></div>
+            <div class="mplayer__playlist-body-current-bg"></div>
+            <div class="mplayer__playlist-body-inner js-perfect-scrollbar"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+"use strict";
+    $(function () {
+        $('.mplayer').mplayer({
+            'volume': 80,
+            'playlist': [
+
+                {
+                    "title": "Радиостанция Тихий Дон",
+                    "author": "73.76 УКВ",
+                    "background": "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/D3D09045-E400-E081-EA1C-9AF88B7C26C1.png",
+                    "pfile": "http://185.154.72.15:8000/;stream.nsv",
+                    "duration": "232"
+                },
+                {
+                    "title": "Детское радио",
+                    "author": "88.2 FM",
+                    "background": "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/0EGtLy6WvFE.jpg",
+                    "pfile": "https://pub0202.101.ru:8443/stream/reg/mp3/128/region_deti_14?",
+                    "duration": "221"
+                },
+                {
+                    "title": "Радио России - Дон-ТР",
+                    "author": "89.0 FM",
+                    "background": "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/Radio-Russia.png",
+                    "pfile": "http://icecast.vgtrk.cdnvideo.ru/russiafm_dontr_mp3",
+                    "duration": "233"
+                },
+                {
+                    "title": "Радио 7",
+                    "author": "89.4 FM",
+                    "background": "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/28980451424.png",
+                    "pfile": "http://variant.fm:8000/RADIO7-192",
+                    "duration": "236"
+                },
+                {
+                    "title": "Комсомольская правда",
+                    "author": "89.8 FM",
+                    "background": "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/3B527986-38E8-8D72-A218-215A84FDCD28.png",
+                    "pfile": "https://kpradio.hostingradio.ru:8003/rostov.radiokp64.mp3",
+                    "duration": "219"
+                },
+                {
+                    "title": "Вести FM - Дон-ТР",
+                    "author": "90.2 FM",
+                    "background": "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/vest.png",
+                    "pfile": "http://icecast.vgtrk.cdnvideo.ru/vestifm_dontr_mp3",
+                    "duration": "211"
+                },
+                {
+                    "title": "Радио Мир",
+                    "author": "90.6 FM",
+                    "background": "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/BDDEFA24-5358-92A1-2704-5BF029AF786F1.png",
+                    "pfile": "https://icecast-mirtv.cdnvideo.ru/radio_mir128",
+                    "duration": "217"
+                },
+                {
+                    "title": "Радио Юмор FM",
+                    "author": "91.2 FM",
+                    "background": "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/FA27A788-2490-8F1A-7F66-4E6647073E9D.png",
+                    "pfile": "http://pub0101.101.ru:8000/stream/reg/mp3/128/region_humor_10",
+                    "duration": "237"
+                },
+                {
+                    "title": "Радио Маяк - Дон-ТР",
+                    "author": "91.8 FM",
+                    "background": "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/mauk.png",
+                    "pfile": "http://icecast.vgtrk.cdnvideo.ru/mayak_dontr_mp3",
+                    "duration": "205"
+                },
+                {
+                    "title": "Хит FM",
+                    "author": "100.1 FM",
+                    "background": "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/C378AD54-3FB5-6ED3-C09D-9E1C363CE831.png",
+                    "pfile": "http://online2.gkvr.ru:8000/hitfm_rnd_64.aac",
+                    "duration": "241"
+                },
+                {
+                    "title": "FM-на-Дону",
+                    "author": "100.7 FM",
+                    "background": "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/C7EBD3AC-7BBB-9DF5-0A13-88A313CF9639.png",
+                    "pfile": "https://radio.mediacdn.ru/fm_na_donu.mp3",
+                    "duration": "242"
+                },
+                {
+                    "title": "Ретро FM",
+                    "author": "101.2 FM",
+                    "background": "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/C993CA8E-4864-E409-1365-D0FF15862118.png",
+                    "pfile": "http://online2.gkvr.ru:8000/retro_rnd_64.aac",
+                    "duration": "243"
+                },
+                {
+                    "title": "Love radio",
+                    "author": "101.6 FM",
+                    "background": "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/hhr.png",
+                    "pfile": "https://online2.gkvr.ru:8001/love_rnd_64.aac",
+                    "duration": "244"
+                },
+                {
+                    "title": "Дорожное радио",
+                    "author": "102.2 FM",
+                    "background": "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/05B98864-345B-B51C-46E6-FF300D903A4F.png",
+                    "pfile": "http://185.154.72.15:8070/;stream.nsv",
+                    "duration": "245"
+                },
+                {
+                    "title": "Русское радио",
+                    "author": "103.0 FM",
+                    "background": "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/ru_rad.png",
+                    "pfile": "http://online2.gkvr.ru:8000/rusradio_rnd_64.aac",
+                    "duration": "246"
+                },
+                {
+                    "title": "Радио Дача",
+                    "author": "103.3 FM",
+                    "background": "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/fc3dada9a5363cc7d238ab32e961c67d.jpg",
+                    "pfile": "https://online2.gkvr.ru:8001/dacha_rnd_64.aac",
+                    "duration": "247"
+                },
+                {
+                    "title": "Монте-Карло",
+                    "author": "103.7 FM",
+                    "background": "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/943D6B26-F563-595E-BB31-986D26BEA6FF.png",
+                    "pfile": "http://online2.gkvr.ru:8000/mc_rnd_64.aac",
+                    "duration": "248"
+                },
+                {
+                    "title": "Авторадио",
+                    "author": "104.1 FM",
+                    "background": "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/54CC.png",
+                    "pfile": "http://pub0101.101.ru:8000/stream/reg/mp3/128/region_avto_148",
+                    "duration": "249"
+                },
+                {
+                    "title": "DFM",
+                    "author": "104.6 FM",
+                    "background": "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/dance.png",
+                    "pfile": "http://online2.gkvr.ru:8000/dfm_rnd_64.aac",
+                    "duration": "250"
+                },
+                {
+                    "title": "Радио Шансон",
+                    "author": "105.1 FM",
+                    "background": "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/6D6B1DCB-2411-B30D-E518-D7D83951C224.png",
+                    "pfile": "http://chanson.hostingradio.ru:8041/chanson128.mp3",
+                    "duration": "251"
+                },
+                {
+                    "title": "Европа Плюс",
+                    "author": "105.7 FM",
+                    "background": "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/6954.png",
+                    "pfile": "http://online2.gkvr.ru:8000/europa_rnd_64.aac",
+                    "duration": "252"
+                },
+                {
+                    "title": "Радио Energy",
+                    "author": "106.6 FM",
+                    "background": "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/nrj_rnd.png",
+                    "pfile": "https://pub0101.101.ru:443/stream/reg/mp3/128/region_energy_98?",
+                    "duration": "253"
+                },
+                {
+                    "title": "Новое Радио",
+                    "author": "107.5 FM",
+                    "background": "https://raw.githubusercontent.com/FMROSTOV/FM-Rostov/main/Sony_Media_Tower_Reborn/wen12.png",
+                    "pfile": "http://185.154.72.15:8050/;stream.nsv",
+                    "duration": "237"
+                }
+            ]
+        });
+    });
+
+</script>
+</body>
+</html>
